@@ -21,5 +21,5 @@ public class CalculatorConstants {
     public static final String EQUAL = "CalculatorLocators.equalButton";
     
     //DISPLAY
-    public static final String CALCULATOR_RESULTS = "CalculatorLocators.CalculatorResults";
+    public static final String CALCULATOR_RESULTS = "CalculatorLocators.calculatorResults";
 }

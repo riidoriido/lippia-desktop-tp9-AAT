@@ -16,7 +16,7 @@ public class CalculatorService{
     }
     
     public static void result(){
-    	Assert.assertEquals(getResult(),"15");
+    	Assert.assertEquals(getResult(),"Se muestra 15");
     }
     
     public static String getResult(){
