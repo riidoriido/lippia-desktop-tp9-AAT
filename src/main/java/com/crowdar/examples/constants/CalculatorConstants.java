@@ -1,25 +1,15 @@
 package com.crowdar.examples.constants;
 
 public class CalculatorConstants {
+    private CalculatorConstants() {}
 	// NUMBERS
-	public static final String ONE = "CalculatorLocators.oneButton";
-    public static final String TWO = "CalculatorLocators.twoButton";
-	public static final String THREE = "CalculatorLocators.threeButton";
-    public static final String FOUR = "CalculatorLocators.fourButton";
-	public static final String FIVE = "CalculatorLocators.fiveButton";
-    public static final String SIX = "CalculatorLocators.sixButton";
-    public static final String SEVEN = "CalculatorLocators.sevenButton";
-    public static final String EIGHT = "CalculatorLocators.eightButton";
-    public static final String NINE = "CalculatorLocators.nineButton";
-    public static final String ZERO = "CalculatorLocators.zeroButton";
+    public static final String SEVEN = "XPATH://*[@AutomationId='num7Button']";
+    public static final String EIGHT = "XPATH://*[@AutomationId='num8Button']";
     
     //OPERATIONS
-    public static final String PLUS = "CalculatorLocators.plusButton";
-    public static final String MINUS = "CalculatorLocators.minusButton";
-    public static final String MULTIPLY = "CalculatorLocators.multiplyButton";
-    public static final String DIVIDE = "CalculatorLocators.divideButton";
-    public static final String EQUAL = "CalculatorLocators.equalButton";
+    public static final String PLUS = "XPATH://*[@AutomationId='plusButton']";
+    public static final String EQUAL = "XPATH://*[@AutomationId='equalButton']";
     
     //DISPLAY
-    public static final String CALCULATOR_RESULTS = "CalculatorLocators.CalculatorResults";
+    public static final String CALCULATOR_RESULTS = "XPATH://*[@AutomationId='CalculatorResults']";
 }

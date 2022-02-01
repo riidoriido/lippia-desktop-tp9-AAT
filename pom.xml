@@ -3,15 +3,14 @@
     <parent>
         <groupId>io.lippia</groupId>
         <artifactId>root</artifactId>
-        <version>3.2.1.1</version>
+        <version>3.2.3.8</version>
     </parent>
 
     <artifactId>Lippia-desktop-example-project</artifactId>
     <url>http://maven.apache.org</url>
     <packaging>jar</packaging>
     <name>Lippia-desktop-example-project</name>
-    <version>3.2.1.1</version>
-
+    <version>3.2.3.8</version>
 
     <properties>
         <crowd.project.name>Lippia-desktop-example-project</crowd.project.name>
@@ -27,6 +26,7 @@
         <crowdar.extent.environment>Local</crowdar.extent.environment>
         <crowdar.extent.user.name>User.name</crowdar.extent.user.name>
     </properties>
+
     <profiles>
         <profile>
             <id>Local</id>
@@ -39,11 +39,12 @@
             </activation>
         </profile>
     </profiles>
+
      <dependencies>
        <dependency>
             <groupId>io.lippia</groupId>
             <artifactId>core</artifactId>
-            <version>3.2.1.1</version>
+            <version>3.2.3.8</version>
         </dependency>
         <dependency>
             <groupId>io.lippia.report</groupId>
@@ -56,6 +57,7 @@
             <version>1.1.0.10</version>
         </dependency>
      </dependencies>
+
     <build>
         <filters>
             <filter>src/main/resources/cucumber.properties</filter>
