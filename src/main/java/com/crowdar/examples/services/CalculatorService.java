@@ -16,14 +16,14 @@ public class CalculatorService{
     }
     
     public static void result(){
-    	Assert.assertEquals(getResult(),"Se muestra 15");
+    	Assert.assertEquals(getResult(),"15");
     }
     
     public static String getResult(){
-    	if(ActionManager.getText(CalculatorConstants.CALCULATOR_RESULTS).contains("Display")) {
-    		return ActionManager.getText(CalculatorConstants.CALCULATOR_RESULTS).replace("Display is", "").trim();
+    	if(ActionManager.getText(CalculatorConstants.CALCULATOR_RESULTS).contains("Se muestra")) {
+    		return ActionManager.getText(CalculatorConstants.CALCULATOR_RESULTS).replace("Se muestra", "").trim();
     	}else {
-    		return ActionManager.getText(CalculatorConstants.CALCULATOR_RESULTS).replace("La pantalla muestra", "").trim();
+    		return ActionManager.getText(CalculatorConstants.CALCULATOR_RESULTS).replace("Display is", "").trim();
     	}	
     }
 }
