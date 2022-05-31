@@ -1,264 +1,92 @@
-# Lippia Web sample project
+# lippia-desktop-sample
 
-This project has the intention of show in a practical way how to use Lippia Automation Framework to build automated tests using Gherkin and Page-Object pattern. This sample project includes the required components as binaries, docker containers and configuration files to simply download and run a set of sample tests in your local computer, using the Lippia container stack described bellow.
+
+
+## Getting started
+
+To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+
+Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+
+## Add your files
+
+- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
+- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+
+```
+cd existing_repo
+git remote add origin https://gitlab.com/aleCarbonari/lippia-desktop-sample.git
+git branch -M main
+git push -uf origin main
+```
+
+## Integrate with your tools
+
+- [ ] [Set up project integrations](https://gitlab.com/aleCarbonari/lippia-desktop-sample/-/settings/integrations)
+
+## Collaborate with your team
+
+- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
+- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
+- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
+- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
+- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+
+## Test and Deploy
+
+Use the built-in continuous integration in GitLab.
+
+- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
+- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
+- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
+- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
+- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
 
 ***
 
+# Editing this README
 
-## Docker stack
+When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
 
-The following project includes the basic Docker Lippia Containers to run this  web sample project. You can choose to run the code from your favourite IDE, run from console or from Jenkins using the Docker Stack.
-To install and start a local instalation with Docker containers go to **Getting started** at the end of this guide. 
+## Suggestions for a good README
+Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
-![Lippia Extent Report](docs/img/architecture_web_lippia.png)
+## Name
+Choose a self-explaining name for your project.
 
-## Project structure
+## Description
+Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
-A typical Lippia Test Automation project usually looks like this 
+## Badges
+On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
 
-```
-	.
-├── main
-│   ├── java
-│   │   └── com
-│   │       └── crowdar
-│   │           └── examples
-│   │               ├── pages
-│   │               │   ├── GoogleHomePage.java
-│   │               │   ├── GoogleSearchResultPage.java
-│   │               │   ├── PageBaseGoogle.java
-│   │               └── steps
-│   │                   └── GoogleSteps.java
-│   └── resources
-│       ├── config.properties
-│       ├── cucumber.properties
-│       └── webdrivermanager.properties
-└── test
-    ├── java
-    │   ├── CrowdTestNgParallelRunner.java
-    │   ├── CrowdTestNgRunner.java
-    │   └── com
-    │       └── crowdar
-    │           └── Hooks.java
-    └── resources
-        └── features
-            └── googleSearch.feature
-```
+## Visuals
+Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
-Folder's description:
+## Installation
+Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-|Path   |Description    |
-|-------|----------------|
-|main\java\\...\examples\pages\\\*.java|Folder with all the **PageObjects** matching steps with java code|
-|main\java\\...\examples\steps\\\*Steps.java|Folder with all the **steps** wich match with Gherkin Test Scenarios |
-|test\resources\features\\\*.feature|Folder with all the **feature files** containing **Test Scenarios** and **Sample Data** |
-|main\resources|Folder with all configuration needed to run Lippia |
+## Usage
+Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
-In this example, *GoogleHomePage* is the first web page the framework will interact with. The **steps** defined in *GoogleSteps.java* to execute the *Test Scenarios* defined in Gherkin language. 
+## Support
+Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
 
+## Roadmap
+If you have ideas for releases in the future, it is a good idea to list them in the README.
 
-|File   | Description    |
-|-------|----------------|
-|PageBaseGoogle    | Define base URL to navigate. |
-|GoogleHomePage.java   | PageObject: between each element in the webpage *GoogleHomePage* you want to interact with. You need to add one new file for each page you want to navigate in your tests. |
-|GoogleSteps.java   | StepOpject: Code to support the behaviour of each **step** coded into the feature files for the *GoogleHomePage* web page. This code executes the interaction between the Framework and the web application and match the steps with the code who run interactions. |
-|googleSearch.feature| Feature file: Definition of the **Test Scenarios** with all the **steps** written in Cucumber format (http)|
+## Contributing
+State if you are open to contributions and what your requirements are for accepting them.
 
-## Page base    
-***
-```
-public class PageBaseGoogle extends CucumberPageBase {
+For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
 
-    public PageBaseGoogle(SharedDriver driver){
-        super( driver);
-        BASE_URL = "http://www.google.com.ar";
-    }
-}
-```
+You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
 
+## Authors and acknowledgment
+Show your appreciation to those who have contributed to the project.
 
-## Page Object    
-***    
-```
-public class GoogleHomePage extends PageBaseGoogle{
+## License
+For open source projects, say how it is licensed.
 
-    private WebElement googleInput(){return getWebElement(By.xpath("//input[@class='gLFyf gsfi']"));}
-    private WebElement googleSearchBtn(){return getWebElement(By.name("btnK"));}
-
-    public GoogleHomePage(SharedDriver driver){
-        super(driver);
-        this.url = ""; //here you can define the custom paths For example:"/search" --> www.googe.com/search
-    }
-
-    public void go(){
-        navigateToIt();
-    }
-
-    public void enterSearchCriteria(String palabra){
-        googleInput().clear();
-        googleInput().sendKeys(palabra);
-    }
-
-    public void clickSearchButton(){
-        googleSearchBtn().click();
-    }
-
-}
-```
-
-## Step Object   
-***
-    
-```
-public class GoogleSteps extends PageSteps {
-
-    private GoogleHomePage homePage;
-    private GoogleSearchResultPage searchResultPage;
-
-    public GoogleSteps(SharedDriver driver){
-        super(driver);
-        homePage = new GoogleHomePage(driver);
-        searchResultPage= new GoogleSearchResultPage(driver);
-    }
-
-    @Given("The client is in google page")
-    public void home(){
-    	homePage.go();
-    }
-
-    @When("The client search for word (.*)")
-    public void search(String criteria){
-    	homePage.enterSearchCriteria(criteria);
-    	homePage.clickSearchButton();
-
-    }
-
-    @Then("The client verify that results are shown properly")
-    public void statVerfication(){
-    	Assert.assertTrue(!searchResultPage.getStats().isEmpty());
-	
-    }
-}
-```
-
-
-## Feature File
-***
-
-The Test Scenarios can be written using BDD metodology. This project includes Cucumber as BDD interpreter which is supported by Lippia by default. On each declared step you can insert the calls defined from service classes            
-    
-```
-Feature: As a potential client i need to search in google to find a web site
-
-  @Smoke
-  Scenario: The client search by "crowdar"
-    Given The client is in google page
-    When The client search for word crowdar
-    Then The client verify that results are shown properly
-    
-  @Smoke
-  Scenario: The client search by "automation"
-    Given The client is in google page
-    When The client search for word automation
-    Then The client verify that results are shown properly
-    
-  @Smoke
-  Scenario: The client search by "docker"
-    Given The client is in google page
-    When The client search for word docker
-    Then The client verify that results are shown properly
-	
-  @Smoke
-  Scenario: The client search by "vagrant"
-    Given The client is in google page
-    When The client search for word vagrant
-    Then The client verify that results are shown properly
-```
-
-# Getting started
-    
-- If you are Linux user 
-    [`Getting started - Linux User`](docs/README_Linux.md)
-- If you are Windows user
-    [`Getting started - Windows User`](docs/README_Windows.md)
-    
-    
-"This project is licensed under the terms of the MIT license."
-
-
-# Update Version Lippia 3
-
-## Main Features: 
-- Added multiple reports of extent reports
-- Added the feature to handle the chrome options by a json file
-- Include project type properties that allows to decide wich library would need for the project
-- Added the dependency for lippia report server 
-- Cucumber version updated
-
-
-## Multiple reports templates:
- - With this version of Lippia the user have the possibility to choose which kind of template for html reports is the best for the project requirements.
-   The user only need to turn on the flag in the extent.properties file located in src/test/resources.
-   
-   
-### Some examples of this are
-   
-#### Avenstack template:
-   ![aventstack_report] (https://bitbucket.org/crowdarautomation/lippia-web-sample-project/raw/91f94d530c4b87c88731a59e6285843926543b58/docs/img/aventstack_report.png)
-   
-#### BDD template:
-   ![bbd_report] (https://bitbucket.org/crowdarautomation/lippia-web-sample-project/raw/91f94d530c4b87c88731a59e6285843926543b58/docs/img/bbd_report.png)
-   
-#### Cards template:
-   ![cards_report] (https://bitbucket.org/crowdarautomation/lippia-web-sample-project/raw/91f94d530c4b87c88731a59e6285843926543b58/docs/img/cards_report.png)
-   
-## Chrome driver options file:   
- - Added the ability to set up the options for the chromedriver in order to have all of the properties setted. For example the user is allowed to set the headless value.
-
-```
- {
-  "browserName": "chrome",
-  "goog:chromeOptions": {"args": ["disable-infobars","--headless","--window-size=1440x900", "--no-sandbox", "--disable-dev-shm-usage" , "--ignore-certificate-errors", "--start-maximized", "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"],
-    "extensions": [],
-    "prefs": {"printing.enabled": false}
-  },
-  "platform": "ANY",
-  "recordVideo":"false"
-}
-```
-
-Also as you can see in this file you can set up the record video property to get the evidence of the each flow in a video
-
-
-## Project type options:
-- The project type option allows the user to say Lippia which library would need to download. For this project is setted the WEB_CHROME one that uses the library for this webdriver.
-  This option can be changed in the pom.xml file
-  You can get more information checking the readme from lippia-core project.
-  
-  ProjectTypes for web project: 		
-
- 	WEB_CHROME
-        crowdar.projectType=WEB_CHROME
-        crowdar.projectType.driverCapabilities.jsonFile=src/main/resources/browsers/chromeCapabilities.json
-        crowdar.setupStrategy=web.DownloadLatestStrategy
-
- 	WEB_FIREFOX
-        crowdar.projectType=WEB_FIREFOX
-        crowdar.projectType.driverCapabilities.jsonFile=src/main/resources/browsers/firefoxCapabilities.json
-        crowdar.setupStrategy=web.DownloadLatestStrategy
-
- 	WEB_EDGE
-        crowdar.projectType=WEB_EDGE
-        crowdar.projectType.driverCapabilities.jsonFile=src/main/resources/browsers/edgeCapabilities.json
-        crowdar.setupStrategy=web.DownloadLatestStrategy
-
- 	WEB_IE
-        crowdar.projectType=WEB_IE
-        crowdar.projectType.driverCapabilities.jsonFile=src/main/resources/browsers/ieCapabilities.json
-        crowdar.setupStrategy=web.DownloadLatestStrategy
-
- 	WEB_SAFARI
-        crowdar.projectType=WEB_SAFARI
-        crowdar.projectType.driverCapabilities.jsonFile=src/main/resources/browsers/safariCapabilities.json
-        crowdar.setupStrategy=web.DownloadLatestStrategy 
-
+## Project status
+If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
