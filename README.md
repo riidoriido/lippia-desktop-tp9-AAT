@@ -1,4 +1,7 @@
 # Lippia Desktop
+[![Crowdar Official Page](https://img.shields.io/badge/crowdar-official%20page-brightgreen)](https://crowdar.com.ar/)
+[![Lippia Official Page](https://img.shields.io/badge/lippia-official%20page-brightgreen)](https://www.lippia.io/)
+
 #### Lippia Desktop is a core level extension that allows us to automate user interface level testing for desktop applications   
 _Keep in mind that it only supports running on **Windows**_
 
