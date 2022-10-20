@@ -17,4 +17,5 @@ public class CalculatorSteps extends PageSteps {
     public void result() {
     	CalculatorService.result();
     }
+
 }

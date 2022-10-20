@@ -16,12 +16,12 @@ public class CalculatorService {
         ActionManager.click(CalculatorConstants.EQUAL);
     }
     
-    public static void result(){
+    public static void result() {
     	Assert.assertEquals(getResult(),"15");
     }
     
     public static String getResult() {
-		return ActionManager.getText(CalculatorConstants.CALCULATOR_RESULTS).replaceAll("[a-zA-Z]+", "").trim();
+		return ActionManager.getText(CalculatorConstants.CALCULATOR_RESULTS).replaceAll("\\D+", "").trim();
     }
 
 }
