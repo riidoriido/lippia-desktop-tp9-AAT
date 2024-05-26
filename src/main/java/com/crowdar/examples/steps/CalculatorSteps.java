@@ -15,7 +15,36 @@ public class CalculatorSteps extends PageSteps {
     
     @Then("Result is Fifteen")
     public void result() {
-    	CalculatorService.result();
+    	CalculatorService.resultAdd();
     }
 
+    @When("Nine Minus Five")
+    public void nineMinusFive() {
+        CalculatorService.minus();
+    }
+
+    @Then("Result is Four")
+    public void resultIsFour() {
+        CalculatorService.resultSubstract();
+    }
+
+    @When("Seven Times Three")
+    public void sevenTimesThree() {
+        CalculatorService.multiply();
+    }
+
+    @Then("Result is Twenty-one")
+    public void resultIsTwentyOne() {
+        CalculatorService.resultMultiply();
+    }
+
+    @When("Eight Divided by Two")
+    public void eightDividedByThree() {
+        CalculatorService.divide();
+    }
+
+    @Then("Result is Four")
+    public void resultIsTwo() {
+        CalculatorService.resultDivide();
+    }
 }
